@@ -1,4 +1,6 @@
 var db = require("../models");
+var axios = require("axios");
+var keys = require("../../keys.js")
 
 module.exports = function(app) {
   // Load index page
@@ -10,6 +12,16 @@ module.exports = function(app) {
       });
     });
   });
+
+  app.get("/teacher", function(req, res) {
+    function firstCall(string) {
+      axios.get("http://api.wolframalpha.com/v2/query?input=" + string + "&appid=" + keys)
+        .then(function(response) {
+          res.json(response);
+        });
+      };
+    firstCall("Germany");
+  };
 
   // Load example page and pass in an example by id
   app.get("/example/:id", function(req, res) {
