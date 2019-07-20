@@ -2,14 +2,14 @@
   "development": {
     "username": "root",
     "password": "password123",
-    "database": "exampledb",
+    "database": "geo_students_db",
     "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
     "password": null,
-    "database": "testdb",
+    "database": "geo_students_db",
     "host": "localhost",
     "dialect": "mysql",
     "logging": false
