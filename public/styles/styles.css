@@ -1,3 +1,39 @@
+body {
+  background: url("../images/classroom.jpeg") no-repeat fixed;
+  background-size: cover;
+  background-color: black;
+
+}
+
+.jumbotron {
+  margin-top: 10%;
+  background-color: rgba(0,0,0,.3);
+  color: white;
+}
+
+#brandLogo {
+  width: 25%;
+  height: 25%;
+}
+
+h3 {
+  color: white
+}
+
+.footer {
+  margin-top: 6%;
+  background-color: rgba(0,0,0,.3);
+  color: white; 
+}
+
+#studentButton {
+  background-color: rgba(13, 104, 240, 0.8);
+}
+
+#teacherButton {
+  background-color: rgba(13, 104, 240, 0.8);
+}
+
 .list-group-item {
   line-height: 2.5;
 }

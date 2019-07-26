@@ -23,6 +23,7 @@ var handleFormSubmit = function(event) {
     question1: $question1.val().trim(),
     question2: $question2.val().trim(),
     question3: $question3.val().trim(),
+    current: true
   };
 
   if (!(question.topic && question.question1 && question.question2 && question.question3)) {

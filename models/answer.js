@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
   var Answer = sequelize.define("Answer", {
-    topic:{
+    topic: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
@@ -41,6 +41,10 @@ module.exports = function(sequelize, DataTypes) {
       validate: {
         len: [1, 500]
       }
+    },
+    current: {
+      type: DataTypes.BOOLEAN,
+      default: false
     }
   });
   return Answer;

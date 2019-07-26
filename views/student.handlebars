@@ -1,0 +1,26 @@
+<div>
+    <div id="wolfram" >
+        {{!-- Display Info from website here --}}
+
+        <button id="display_page" ></button>
+    </div>
+
+
+    <p>Answers</p>
+    <div class="container" >
+        {{#each questions}}
+            {{#if current}}
+                <h1 id="topic" data-id="{{topic}}" >{{topic}}</h1>
+                {{question1}}
+                    <input type="text" id="answer1" class="form-control" required> Answer1
+                {{question2}}
+                    <input type="text" id="answer2" class="form-control" required> Answer2
+                {{question3}}
+                    <input type="text" id="answer3" class="form-control" required> Answer3
+                    <input type="text" id="comment" name="comment">Comment
+                    <input type="text" id="student_name" name="student_name">Student name
+                    <button id="submitAns" class="btn btn-danger" type="submit">Submit Answers</button>
+            {{/if}}
+        {{/each}}
+    </div>
+</div>
