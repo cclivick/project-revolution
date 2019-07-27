@@ -1,22 +1,27 @@
 <div>
-    <div id="wolfram" >
+    <div class= "container" id="wolfram" >
         {{!-- Display Info from website here --}}
-
-        <button id="display_page" ></button>
+        <div class="row">
+            <div class="col-md" id="countryOneTable">
+                    <h1>Country 1 Data</h1>
+                </div>
+            <div class="col-md" id="countryTwoTable">
+                    <h1>Country 2 Data</h1>
+                </div>
+        </div>
     </div>
 
 
-    <p>Answers</p>
-    <div class="container" >
+    <div class="container" id="questionsForm">
         {{#each questions}}
             {{#if current}}
                 <h1 id="topic" data-id="{{topic}}" >{{topic}}</h1>
                 {{question1}}
-                    <input type="text" id="answer1" class="form-control" required> Answer1
+                    <input type="text" id="answer1" class="form-control studentAnswers" required></input>
                 {{question2}}
-                    <input type="text" id="answer2" class="form-control" required> Answer2
+                    <input type="text" id="answer2" class="form-control studentAnswers" required></input>
                 {{question3}}
-                    <input type="text" id="answer3" class="form-control" required> Answer3
+                    <input type="text" id="answer3" class="form-control studentAnswers" required></input>
                     <input type="text" id="comment" name="comment">Comment
                     <input type="text" id="student_name" name="student_name">Student name
                     <button id="submitAns" class="btn btn-danger" type="submit">Submit Answers</button>
