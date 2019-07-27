@@ -2,9 +2,9 @@ require("dotenv").config();
 var express = require("express");
 var exphbs = require("express-handlebars");
 
-var key = require("./keys");
+//var key = require("./keys");
 
-console.log(key);
+//console.log(key);
 
 var db = require("./models");
 

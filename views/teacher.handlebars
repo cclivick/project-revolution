@@ -3,6 +3,41 @@
     <div class="col-8 offset-2">
       <div class="card mt-4">
 
+{{!-- From Hanna --}}
+<div>
+  <h2>Set topic and ask questions</h2>
+        <input type="text" id="countries" class="form-control" required> Countries
+        <input type="text" id="question1" class="form-control" required> Question1
+        <input type="text" id="question2" class="form-control" required> Question2
+        <input type="text" id="question3" class="form-control" required> Question3
+      <button id="submitQuest" class="btn btn-danger" type="submit">Submit Questions</button>
+</div>
+
+<div class="container">
+  <h2>Get students answers for current topic</h2>
+  <div>
+    <p>Answers</p>
+    <div>
+      <ul>
+        {{#each answers}}
+            {{#if current}}
+              <li>
+                Topic: {{topic}}
+                Student: {{student_name}}
+                Answer1: {{answer1}}
+                Answer2: {{answer2}}
+                Answer3: {{answer3}}
+                Comment: {{comment}}
+              </li>
+            {{/if}}
+        {{/each}}
+      </ul>
+    </div>
+</div>
+</div>
+{{!-- From Hanna --}}
+
+{{!-- 
         <form class="clearfix mb-4" action="POST">
           <div class="form-group">
             <label for="example-text">Example Text</label>
@@ -36,7 +71,7 @@
           <p>
             <strong>Description:</strong> {{example.description}}</p>
             <a href="/">← Back To Home</a>
-        </div>
+        </div> --}}
 
       </div>
     </div>
