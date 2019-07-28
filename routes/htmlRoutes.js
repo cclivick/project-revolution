@@ -17,7 +17,6 @@ module.exports = function(app) {
    
   app.get("/teacher", function(req, res) {
     db.Answer.findAll({}).then(function(data) {
-      console.log(data)
       res.render("teacher", {
         answers: data
       });
