@@ -1,20 +1,48 @@
-<div class="container">
-  <div class="row">
-    <div class="col-8 offset-2">
-      <div class="card mt-4">
-
+<div class="container" id="teacherForm">
 {{!-- From Hanna --}}
-<div>
-  <h2>Set topic and ask questions</h2>
-        <input type="text" id="countries" class="form-control" required> Countries
-        <input type="text" id="question1" class="form-control" required> Question1
-        <input type="text" id="question2" class="form-control" required> Question2
-        <input type="text" id="question3" class="form-control" required> Question3
-      <button id="submitQuest" class="btn btn-danger" type="submit">Submit Questions</button>
-</div>
+  <div class="row">
+    <div class="col-md-12">
+        <h2>Set topic and ask questions</h2>
+      </div>
+    </div>
+  <div class="row">
+      <div class="col-md">
+          Country 1: <input type="text" id="countries" class="form-control teacherInput" required></input>
+        </div>
+      <div class="col-md">
+          Country 2: <input type="text" id="countries" class="form-control teacherInput" required></input>
+        </div>
+    </div>
+        <br>
 
-<div class="container">
-  <h2>Get students answers for current topic</h2>
+  <div class="row">
+    <div class="col-md-12">
+         Question 1: <input type="text" id="question1" class="form-control teacherInput" required></input>
+      </div>
+    </div>
+  <div class="row">
+    <div class="col-md-12">
+        Question 2: <input type="text" id="question2" class="form-control teacherInput" required></input>
+      </div>
+    </div>
+  <div class="row">
+    <div class="col-md-12">
+        Question 3: <input type="text" id="question3" class="form-control teacherInput" required></input>
+      </div>
+    </div>
+  <div class="row" id="submitButtonRow">
+    <div class="col-md-12">
+        <button id="submitQuest" class="btn btn-danger" type="submit">Submit Questions</button>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+<div class="container" id="studentAnswersTable">
+  <h2>Class answers for current topic:</h2>
   <div>
     <p>Answers</p>
     <div>

@@ -14,28 +14,28 @@ module.exports = function(sequelize, DataTypes) {
         len: [1, 100]
       }
     },
-    answer1:  {
+    answer1: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [1, 200]
       }
     },
-    answer2:  {
+    answer2: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [1, 200]
       }
     },
-    answer3:  {
+    answer3: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [1, 200]
       }
     },
-    comment:  {
+    comment: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {

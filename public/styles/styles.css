@@ -37,3 +37,32 @@ h3 {
 .list-group-item {
   line-height: 2.5;
 }
+
+#questionsForm{
+  background-color: rgba(13, 104, 240, 0.8);
+  margin-bottom: 25px;
+  border-radius: 10px;
+}
+#teacherForm,
+#studentAnswersTable{
+  background-color: rgba(13, 104, 240, 0.8);
+  margin-bottom: 25px;
+  margin-top: 25px;
+  border-radius: 10px;
+  padding: 15px; 
+}
+.teacherInput{
+  width: 100%;
+}
+#submitButtonRow{
+  margin-top: 10px;
+}
+#submitQuest{
+  height: 45px;
+}
+#wolfram{
+  background-color: rgba(13, 104, 240, 0.8);
+  margin-bottom: 25px;
+  margin-top: 25px;
+  border-radius: 10px;
+}
