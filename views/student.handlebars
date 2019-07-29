@@ -33,4 +33,17 @@
             {{/if}}
         {{/each}}
     </div>
+
+    <div style="display: none" id="comments">
+        <h2>Students comments</h2>
+        {{#each questions}}
+            {{#if current}}
+                {{#each Answers}}
+                    <div>
+                        {{student_name}} said {{comment}}
+                    </div>
+                {{/each}}
+            {{/if}}
+        {{/each}}
+    </div>
 </div>

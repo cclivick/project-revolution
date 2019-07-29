@@ -8,7 +8,12 @@ module.exports = function(app) {
   });
 
   app.get("/student", function(req, res) {
-    db.Question.findAll({}).then(function(data) {
+    db.Question.findAll({
+      include:[{
+        model: db.Answer
+      }]
+    }).then(function(data) {
+      console.log(data)
       res.render("student", {
         questions: data
       });
