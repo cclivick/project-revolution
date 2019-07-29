@@ -16,8 +16,11 @@ module.exports = function(app) {
   });
    
   app.get("/teacher", function(req, res) {
-    db.Answer.findAll({}).then(function(data) {
-      console.log(data)
+    db.Answer.findAll({
+      include: [{
+        model: db.Question
+      }]
+    }).then(function(data) {
       res.render("teacher", {
         answers: data
       });

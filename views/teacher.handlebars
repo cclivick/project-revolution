@@ -1,45 +1,40 @@
 <div class="container" id="teacherForm">
-{{!-- From Hanna --}}
   <div class="row">
     <div class="col-md-12">
-        <h2>Set topic and ask questions</h2>
-      </div>
-    </div>
-  <div class="row">
-      <div class="col-md">
-          Country 1: <input type="text" id="countries" class="form-control teacherInput" required></input>
-        </div>
-      <div class="col-md">
-          Country 2: <input type="text" id="countries" class="form-control teacherInput" required></input>
-        </div>
-    </div>
-        <br>
-
-  <div class="row">
-    <div class="col-md-12">
-         Question 1: <input type="text" id="question1" class="form-control teacherInput" required></input>
-      </div>
-    </div>
-  <div class="row">
-    <div class="col-md-12">
-        Question 2: <input type="text" id="question2" class="form-control teacherInput" required></input>
-      </div>
-    </div>
-  <div class="row">
-    <div class="col-md-12">
-        Question 3: <input type="text" id="question3" class="form-control teacherInput" required></input>
-      </div>
-    </div>
-  <div class="row" id="submitButtonRow">
-    <div class="col-md-12">
-        <button id="submitQuest" class="btn btn-danger" type="submit">Submit Questions</button>
-      </div>
+      <h2>Set topic and ask questions</h2>
     </div>
   </div>
+  <div class="row">
+      <div class="col-md">
+        Country 1: <input type="text" id="country1" class="form-control teacherInput" required></input>
+      </div>
+      <div class="col-md">
+        Country 2: <input type="text" id="country2" class="form-control teacherInput" required></input>
+      </div>
+  </div>
+  <br>
 
-
-
-
+  <div class="row">
+    <div class="col-md-12">
+      Question 1: <input type="text" id="question1" class="form-control teacherInput" required></input>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      Question 2: <input type="text" id="question2" class="form-control teacherInput" required></input>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      Question 3: <input type="text" id="question3" class="form-control teacherInput" required></input>
+    </div>
+  </div>
+  <div class="row" id="submitButtonRow">
+    <div class="col-md-12">
+      <button id="submitQuest" class="btn btn-danger" type="submit">Submit Questions</button>
+    </div>
+  </div>
+</div>
 
 <div class="container" id="studentAnswersTable">
   <h2>Class answers for current topic:</h2>
@@ -50,7 +45,8 @@
         {{#each answers}}
             {{#if current}}
               <li>
-                Topic: {{topic}}
+                Country #1: {{country1}}
+                Country #2: {{country2}}
                 Student: {{student_name}}
                 Answer1: {{answer1}}
                 Answer2: {{answer2}}
@@ -61,47 +57,23 @@
         {{/each}}
       </ul>
     </div>
-</div>
-</div>
-{{!-- From Hanna --}}
-
-{{!-- 
-        <form class="clearfix mb-4" action="POST">
-          <div class="form-group">
-            <label for="example-text">Example Text</label>
-            <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
-          </div>
-
-          <div class="form-group">
-            <label for="example-description">Example Description</label>
-            <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
-          </div>
-
-          <button id="submit" class="btn btn-primary float-right">Submit</button>
-        </form>
-
-        <h3>Examples:</h3>
-        <ul id="example-list" class="list-group">
-          {{#each examples}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-          </li>
-          {{/each}}
-        </ul>
-        <div class="card-body">
-          <h5 class="card-title">Example</h5>
-          <p>
-            <strong>ID</strong>: {{example.id}}</p>
-          <p>
-          <p>
-            <strong>Text</strong>: {{example.text}}</p>
-          <p>
-            <strong>Description:</strong> {{example.description}}</p>
-            <a href="/">← Back To Home</a>
-        </div> --}}
-
-      </div>
-    </div>
   </div>
 </div>
+
+<div>
+  <div>
+    <button id="viewarchive">View archive</button>
+      <div id="archivebuttons">
+      </div>
+  </div>
+</div>
+
+<div>
+  <div id="archive">
+  </div>
+</div>
+
+<a href="/">← Back To Home</a>
+  
+
+
