@@ -6,6 +6,8 @@ $(document).ready(function() {
   var $question2 = $("#question2");
   var $question3 = $("#question3");
   var $submitBtnQuest = $("#submitQuest");
+  var $viewarchive = $("#viewarchive")
+  var archive = []
 
   function saveQuestion (question) {
     return $.ajax({
@@ -44,6 +46,41 @@ $(document).ready(function() {
     $question3.val("");
   };
 
+  function viewarchive(){
+    $.ajax("/api/questions", {
+      type: "GET"
+    }).then(function(res){
+      archive=res
+      for(var i = 0; i<archive.length; i++){
+        if(!archive[i].current){
+          var a = $("<button>")
+          a.addClass("archeachbutton")
+          a.attr("id", archive[i].id)
+          a.text(archive[i].country1 + " and " + archive[i].country2)
+          $("#archivebuttons").append(a)
+        }
+      }
+    })
+  }
+
+  function vieweacharchive(){
+    var id=$(this).attr("id")
+    for(var i = 0; i<archive.length; i++){
+      if(id==archive[i].id){
+        var b = $("<h2>")
+        b.text("Country #1: " + archive[i].country1 + " Country #2: " + archive[i].country2)
+        $("#archive").append(b)
+        for (var j=0; j<archive[i].Answers.length;j++){
+          var c = $("<p>")
+          c.text("Student: "+ archive[i].Answers[j].student_name + "; Answer1: "+ archive[i].Answers[j].answer1 + "; Answer2: "+ archive[i].Answers[j].answer2 + "; Answer3: "+ archive[i].Answers[j].answer3 + "; Comment: " + archive[i].Answers[j].comment)
+          $("#archive").append(c)
+        }
+      }
+    }
+  }
+
   $submitBtnQuest.on("click", handleFormSubmit)
+  $viewarchive.on("click", viewarchive)
+  $(document).on("click", ".archeachbutton", vieweacharchive)
 
 })

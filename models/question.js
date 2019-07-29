@@ -40,5 +40,10 @@ module.exports = function(sequelize, DataTypes) {
       default: false
     }
   });
+  Question.associate = function(models) {
+    models.Question.hasMany(models.Answer, {
+      onDelete: "CASCADE"
+    })
+  }
   return Question;
 };

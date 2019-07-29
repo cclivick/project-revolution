@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
   var $country1 = $("#country1").data("id")
   var $country2 = $("#country2").data("id")
   var $answer1 = $("#answer1");
@@ -8,6 +7,7 @@ $(document).ready(function() {
   var $comment = $("#comment");
   var $student_name = $("#student_name")
   var $submitBtnAns = $("#submitAns");
+  var QuestionId = $(".currentquestion").data("id")
 
   function saveAnswer (answer) {
     return $.ajax({
@@ -23,7 +23,8 @@ $(document).ready(function() {
   var handleFormSubmit = function(event) {
     event.preventDefault();
     
-    var answer = {   
+    var answer = {
+      QuestionId: QuestionId,    
       country1: $country1,
       country2: $country2,
       current: true,

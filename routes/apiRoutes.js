@@ -2,7 +2,11 @@ var db = require("../models");
 
 module.exports = function(app) {
   app.get("/api/questions", function(req, res) {
-    db.Question.findAll({}).then(function(dataQuestions) {
+    db.Question.findAll({
+      include:[{
+        model: db.Answer
+      }]
+    }).then(function(dataQuestions) {
       res.json(dataQuestions);
     });
   });

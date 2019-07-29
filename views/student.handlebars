@@ -16,18 +16,20 @@
         {{#each questions}}
             {{#if current}}
             {{!-- From Hanna - style as you wish, but save id names. Countries have to be on separate elements with separate id for proper work of DB --}}
-                <h1 id="country1" data-id="{{country1}}" >{{country1}}</h1>
-                <h2>AND</h2>
-                <h1 id="country2" data-id="{{country2}}" >{{country2}}</h1>
-                {{question1}}
-                    <input type="text" id="answer1" class="form-control studentAnswers" required></input>
-                {{question2}}
-                    <input type="text" id="answer2" class="form-control studentAnswers" required></input>
-                {{question3}}
-                    <input type="text" id="answer3" class="form-control studentAnswers" required></input>
-                    <input type="text" id="comment" name="comment">Comment
-                    <input type="text" id="student_name" name="student_name">Student name
-                    <button id="submitAns" class="btn btn-danger" type="submit">Submit Answers</button>
+                <div class="currentquestion" data-id="{{id}}">
+                    <h1 id="country1" data-id="{{country1}}" >{{country1}}</h1>
+                    <h2>AND</h2>
+                    <h1 id="country2" data-id="{{country2}}" >{{country2}}</h1>
+                    {{question1}}
+                        <input type="text" id="answer1" class="form-control studentAnswers" required></input>
+                    {{question2}}
+                        <input type="text" id="answer2" class="form-control studentAnswers" required></input>
+                    {{question3}}
+                        <input type="text" id="answer3" class="form-control studentAnswers" required></input>
+                        <input type="text" id="comment" name="comment">Comment
+                        <input type="text" id="student_name" name="student_name">Student name
+                        <button id="submitAns" class="btn btn-danger" type="submit">Submit Answers</button>
+                </div>
             {{/if}}
         {{/each}}
     </div>

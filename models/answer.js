@@ -54,5 +54,12 @@ module.exports = function(sequelize, DataTypes) {
       default: false
     }
   });
+  Answer.associate = function (models) {
+    models.Answer.belongsTo(models.Question, {
+      foreignKey: {
+        allowNull: false
+      }
+    })
+  }  
   return Answer;
 };
