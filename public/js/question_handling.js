@@ -47,6 +47,7 @@ $(document).ready(function() {
   };
 
   function viewarchive(){
+    $("#archivebuttons").empty()
     $.ajax("/api/questions", {
       type: "GET"
     }).then(function(res){
@@ -64,6 +65,7 @@ $(document).ready(function() {
   }
 
   function vieweacharchive(){
+    $("#archive").empty()
     var id=$(this).attr("id")
     for(var i = 0; i<archive.length; i++){
       if(id==archive[i].id){
