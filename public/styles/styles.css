@@ -23,7 +23,7 @@
 .header {
   background: url("../images/classroom.jpeg") no-repeat fixed;
   background-size: cover;
-  flex-shrink: 0;
+  height: auto;
 }
 
 #brandLogo {
