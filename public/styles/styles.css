@@ -1,29 +1,29 @@
-/* body {
+body {
   background: url("../images/classroom.jpeg") no-repeat fixed;
   background-size: cover;
   background-color: black;
+  font-family: 'Barlow', sans-serif;
+  font-size: 100%;
+}
 
-} */
-
-
-.top-bar {
-  background-color: rgba(13, 104, 240, 0.8);
+#top-bar {
+  background-color: rgba(0, 0, 0, 0.1);
   color: white;
   flex-shrink: 0;
+  padding-left: 4%;
+  padding-right: 12%;
 }
 
-.top-bar-left {
-  padding-left: 200px;
-}
-
-.top-bar-right {
-  padding-right: 200px;
+#top-bar-logo {
+  width: 20%;
+  height: 20%;
 }
 
 .header {
   background: url("../images/classroom.jpeg") no-repeat fixed;
   background-size: cover;
-  height: auto;
+  flex-shrink: 0;
+  margin-top: 3%;
 }
 
 #brandLogo {
@@ -32,23 +32,48 @@
   padding-left: 20px;
 }
 
-h3 {
-  color: black;
+#option {
+  font-family: 'Barlow', sans-serif;
+  font-size: 200%;
+  font-weight: bold;
+  color: white;
+  padding-bottom: 10px;
+  padding-top: 10px;
   align-items: center;
 }
 
-#option {
-  padding-bottom: 10px;
-  padding-top: 10px;
-}
-
 .footer {
-  height: 100px;
-  margin-top: 6%;
+  height: 50px;
+  margin-top: 5%;
   background-color: rgba(13,104,240,.8);
   color: white; 
   position: relative; 
   width: 100%;
+  flex-shrink: 0;
+  padding-top: 1%;
+}
+
+#studentPageLink {
+  font-size: 100%;
+  font-weight: bold;
+  font-family: 'Barlow', sans-serif;
+  color: white;
+}
+
+#github {
+  text-align: left;
+  color: white;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 12%;
+}
+
+#copyright {
+  text-align: right;
+  color: white;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 60%;
 }
 
 #studentButton {
@@ -63,43 +88,120 @@ h3 {
   line-height: 2.5;
 }
 
-#github {
-  color: white;
-  padding-bottom: 10px;
-  padding-top: 10px;
-}
-
 @media (max-width:800px) {
   .footer {
     position: fixed;
     bottom:0;
   }
 }
-#questionsForm{
-  background-color: rgba(13, 104, 240, 0.8);
+
+.questionsForm {
   margin-bottom: 25px;
   border-radius: 10px;
 }
-#teacherForm,
-#studentAnswersTable{
+.currentquestion {
+  text-align: center;
+}
+
+#countriesVS {
+  font-weight: bold;
+}
+
+#setTopic, #classAnswers {
+font-weight: bold;
+margin-bottom: 25px;
+margin-top: 0px;
+}
+
+#teacherForm {
   background-color: rgba(13, 104, 240, 0.8);
   margin-bottom: 25px;
   margin-top: 25px;
   border-radius: 10px;
   padding: 15px; 
 }
-.teacherInput{
+
+#studentAnswersTable {
+  margin-bottom: 25px;
+  border-radius: 10px;
+}
+
+.studentAnswers {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: white;
+  text-align: left;
+}
+
+.teacherInput {
   width: 100%;
 }
-#submitButtonRow{
+
+#country1, #country2, #question1, #question2, #question3 {
+  border-radius: 6px;
+  padding: 5px;
+  margin: 2px;
+}
+
+#comment {
+  padding-left: 20px;
+  padding-bottom: 105px;
+  padding-right: 23px;
+  height: 150px;
+  width: 98%;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#student_name {
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 39px;
+  width: 155px;
+}
+
+#submitButtonRow {
   margin-top: 10px;
 }
-#submitQuest{
+
+#submitQuest {
+  border-radius: 6px;
+  padding: 15px;
   height: 45px;
+  color: white;
+  margin: 10px;
+  background-color: rgb(3, 38, 90);
+  margin-right: 74%;
 }
-#wolfram{
+
+#submitAns {
+  border-radius: 6px;
+  padding: 15px;
+  height: 45px;
+  color: white;
+  margin: 10px;
+  background-color: rgb(3, 38, 90);
+  margin-right: 74%;
+}
+
+#viewarchive {
+  align-items: right;
+  border-radius: 6px;
+  padding: 15px;
+  height: 45px;
+  color: white;
+  margin: 10px;
+  background-color: rgb(3, 38, 90);
+}
+
+#wolfram {
   background-color: rgba(13, 104, 240, 0.8);
   margin-bottom: 25px;
   margin-top: 25px;
   border-radius: 10px;
+  padding: 25px; 
+}
+
+h1, h2, h3 {
+  font-family: 'Barlow', sans-serif;
 }
