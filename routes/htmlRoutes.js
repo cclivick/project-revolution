@@ -13,7 +13,6 @@ module.exports = function(app) {
         model: db.Answer
       }]
     }).then(function(data) {
-      console.log(data)
       res.render("student", {
         questions: data
       });
