@@ -36,14 +36,25 @@ $(document).ready(function() {
       alert("You must fill all the fields!");
       return;
     }
-
-    saveQuestion(question)
-
-    $country1.val("");
-    $country2.val("");
-    $question1.val("");
-    $question2.val("");
-    $question3.val("");
+    else{
+      $.ajax("/api/answers", {
+        type: "GET"
+      }).then(function(res){
+        for(var i=0; i<res.length; i++){
+          if(res[i].current){
+            if(res[i].grade==null){
+              alert("Please grade all submissions for current topic")
+            }
+          }
+        }
+        saveQuestion(question)
+        $country1.val("");
+        $country2.val("");
+        $question1.val("");
+        $question2.val("");
+        $question3.val("");
+      })
+    }
   };
 
   function viewarchive(){
@@ -74,7 +85,7 @@ $(document).ready(function() {
         $("#archive").append(b)
         for (var j=0; j<archive[i].Answers.length;j++){
           var c = $("<p>")
-          c.text("Student: "+ archive[i].Answers[j].student_name + "; Answer1: "+ archive[i].Answers[j].answer1 + "; Answer2: "+ archive[i].Answers[j].answer2 + "; Answer3: "+ archive[i].Answers[j].answer3 + "; Comment: " + archive[i].Answers[j].comment)
+          c.text("Student: "+ archive[i].Answers[j].student_name + "; Answer1: "+ archive[i].Answers[j].answer1 + "; Answer2: "+ archive[i].Answers[j].answer2 + "; Answer3: "+ archive[i].Answers[j].answer3 + "; Comment: " + archive[i].Answers[j].comment + "; Grade: " + archive[i].Answers[j].grade)
           $("#archive").append(c)
         }
       }
@@ -84,5 +95,21 @@ $(document).ready(function() {
   $submitBtnQuest.on("click", handleFormSubmit)
   $viewarchive.on("click", viewarchive)
   $(document).on("click", ".archeachbutton", vieweacharchive)
+  $(document).on("click", ".grade", function () {
+    event.preventDefault()
+    var thisGrade = $(this).val()
+    var id = $(this).data("id")
+    $.ajax("/api/answers/" + id, {
+      type: "PUT",
+      data: {
+        id: id,
+        grade: thisGrade
+      }
+  }).then(
+      function() {
+        location.reload()
+      }
+    )
+  })
 
 })

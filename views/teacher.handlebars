@@ -58,6 +58,59 @@
       </div>
     </div>
 
+
+<div class="container" id="studentAnswersTable">
+  <h2>Class answers for current topic:</h2>
+  <div>
+    <p>Answers</p>
+    <div>
+      <ul>
+        <h3>Need grades</h3>
+        {{#each answers}}
+            {{#if current}}
+              {{#unless grade}}
+                    <li>
+                      Country #1: {{country1}}
+                      Country #2: {{country2}}
+                      Student: {{student_name}}
+                      Answer1: {{answer1}}
+                      Answer2: {{answer2}}
+                      Answer3: {{answer3}}
+                      Comment: {{comment}}
+                      <div class="button-group grades" data-id="{{id}}">
+                        <button class="button grade" value="A" data-id="{{id}}">A</button>
+                        <button class="button grade" value="B" data-id="{{id}}">B</button>
+                        <button class="button grade" value="C" data-id="{{id}}">C</button>
+                        <button class="button grade" value="D" data-id="{{id}}">D</button>
+                        <button class="button grade" value="F" data-id="{{id}}">F</button>
+                      </div>
+                    </li>
+                {{/unless}}
+            {{/if}}
+        {{/each}}
+      </ul>
+      
+      <ul>
+        <h3>Graded</h3>
+        {{#each answers}}
+            {{#if current}}
+              {{#if grade}}
+              <ul>
+                  <li>
+                    Country #1: {{country1}}
+                    Country #2: {{country2}}
+                    Student: {{student_name}}
+                    Answer1: {{answer1}}
+                    Answer2: {{answer2}}
+                    Answer3: {{answer3}}
+                    Comment: {{comment}}
+                    Grade: {{grade}}
+                  </li>
+                </ul>
+              {{/if}}
+            {{/if}}
+        {{/each}}
+        
     </div>
   </div>
 {{!-- end of teacherForm --}}
