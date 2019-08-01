@@ -1,40 +1,63 @@
-<div class="container" id="teacherForm">
-  <div class="row">
-    <div class="col-md-12">
-      <h2>Set topic and ask questions</h2>
-    </div>
-  </div>
-  <div class="row">
-      <div class="col-md">
-        Country 1: <input type="text" id="country1" class="form-control teacherInput" required></input>
-      </div>
-      <div class="col-md">
-        Country 2: <input type="text" id="country2" class="form-control teacherInput" required></input>
-      </div>
-  </div>
-  <br>
-
-  <div class="row">
-    <div class="col-md-12">
-      Question 1: <input type="text" id="question1" class="form-control teacherInput" required></input>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-12">
-      Question 2: <input type="text" id="question2" class="form-control teacherInput" required></input>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-12">
-      Question 3: <input type="text" id="question3" class="form-control teacherInput" required></input>
-    </div>
-  </div>
-  <div class="row" id="submitButtonRow">
-    <div class="col-md-12">
-      <button id="submitQuest" class="btn btn-danger" type="submit">Submit Questions</button>
-    </div>
+<div class="top-bar" id="top-bar">
+  <h1 class="top-bar-left stacked-for-medium">
+    <a href="/">
+      <img id="top-bar-logo"src="images/logo.png">
+    </a>
+  </h1>
+  <div class="top-bar-right stacked-for-medium">
+    <a href="/student" id="studentPageLink">Student</a>
   </div>
 </div>
+
+<div class="grid-container" id="teacherForm">
+  <div class="grid-x grid-margin-x">
+      <div class= "cell align center">
+
+    <div class="row">
+      <div class= "cell small-12">
+        <h2 id="setTopic">Set topic and ask questions:</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class= "cell small-12">
+        Country 1: <input type="text" id="country1" class="form-control teacherInput" required></input>
+            
+        Country 2: <input type="text" id="country2" class="form-control teacherInput" required></input>
+      </div>
+    </div>
+
+  <br>
+
+    <div class="row">
+      <div class= "cell small-12">
+        Question 1: <input type="text" id="question1" class="form-control teacherInput" required></input>
+      </div>
+    </div>
+    <div class="row">
+      <div class= "cell small-12">
+        Question 2: <input type="text" id="question2" class="form-control teacherInput" required></input>
+      </div>
+    </div>
+    <div class="row">
+      <div class= "cell small-12">
+        Question 3: <input type="text" id="question3" class="form-control teacherInput" required></input>
+      </div>
+    </div>
+
+  <br>
+
+    <div class="row" id="submitButtonRow">
+      <div class="cell small-12">
+        <button id="submitQuest" class="btn btn-danger" type="submit">Submit Questions</button>
+
+        {{!-- NOT SURE WHAT VIEW ARCHIVE IS SUPPOSED TO DO --}}
+          <button id="viewarchive">View archive</button>
+            {{!-- <div id="archivebuttons"></div>
+              <div id="archive"></div> --}}
+      </div>
+    </div>
+
 
 <div class="container" id="studentAnswersTable">
   <h2>Class answers for current topic:</h2>
@@ -87,24 +110,49 @@
               {{/if}}
             {{/if}}
         {{/each}}
+        
     </div>
   </div>
+{{!-- end of teacherForm --}}
 </div>
 
-<div>
-  <div>
-    <button id="viewarchive">View archive</button>
-      <div id="archivebuttons">
+<div class="grid-container" id="teacherForm">
+      <div class="cell align center">
+        <div class="container" id="studentAnswersTable">
+          <h2 id="classAnswers">Class answers for current topic:</h2>
+            <div>
+                <div class="studentAnswers">
+                  <ul>
+                    {{#each answers}}
+                      {{#if current}}
+                      <div>
+                        <p>Student Name: {{student_name}}</p>
+                        <p>Country #1: {{country1}}</p>
+                        <p>Country #2: {{country2}}</p>
+                        <p>Answer 1: {{answer1}}</p>
+                        <p>Answer 2: {{answer2}}</p>
+                        <p>Answer 3:{{answer3}}</p>
+                        <p>Comment: {{comment}}</p>
+                        <hr>
+                      </div>
+                      {{/if}}
+                    {{/each}}
+                  </ul>
+                </div>
+            </div>
+        </div>
       </div>
-  </div>
+{{!-- end of teacherForm --}}
 </div>
 
-<div>
-  <div id="archive">
-  </div>
+<div class="footer">
+    <div class="cell small-12">
+        <a href="https://github.com/cclivick/project-revolution" id="github">GitHub Repository</a>  
+        <a id="copyright">Teach.me &copy; 2019</a>
+    </div>
 </div>
 
-<a href="/">← Back To Home</a>
+
   
 
 
