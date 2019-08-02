@@ -11,51 +11,46 @@
 </div>
 
 <div class="grid-container" id="wolfram">
-  <div class="grid-x grid-margin-x" id="studentForm">
-      <div class= "cell align center">
-        {{!-- Display Info from website here --}}
-        <div class="questionsForm">
+    <div class="grid-x grid-margin-x" id="studentForm">
+        <div class= "cell align center">
             {{#each questions}}
                 {{#if current}}
                     <div class="grid-x currentquestion" data-id="{{id}}">
                         <div class="cell small-6" id="countryOne">
+                            <h1>Country 1 Data</h1>
                             <h1 id="country1" data-id="{{country1}}">{{country1}}</h1>
-                                <br>
-                            <table id="countryOneTable">
-                                <th>
-                                    <tr>{{country1data}}</tr>
-                                </th>
+                            <br>
+                            <table data-id="{{country1data}}" id="countryOneTable">
+                                <tbody id="countryOneTableBody">
+                                </tbody>
                             </table>
                         </div>
                         <div class="cell small-6" id="countryTwo">
+                            <h1>Country 2 Data</h1>
                             <h1 id="country2" data-id="{{country2}}">{{country2}}</h1>
-                                <br>
-                            <table id="countryTwoTable">
-                                <th>
-                                    <tr>{{country2data}}</tr>
-                                </th>
+                            <br>
+                            <table data-id="{{country2data}}" id="countryTwoTable">
+                                <tbody id="countryTwoTableBody">
+                                </tbody>
                             </table>
                         </div>
                     </div>
                     {{question1}}
-                        <textarea type="text" id="answer1" class="form-control studentAnswers" required></textarea>
+                        <input type="text" id="answer1" class="form-control studentAnswers" required></input>
                     {{question2}}
-                        <textarea type="text" id="answer2" class="form-control studentAnswers" required></textarea>
+                        <input type="text" id="answer2" class="form-control studentAnswers" required></input>
                     {{question3}}
-                        <textarea type="text" id="answer3" class="form-control studentAnswers" required></textarea>
+                        <input type="text" id="answer3" class="form-control studentAnswers" required></input>
                     <h3>Comment</h3>    
-                        <textarea type="text" id="comment" name="comment"></textarea>
+                        <input type="text" id="comment" name="comment"></input>
                     <h3>Your Name</h3>
                         <input type="text" id="student_name" name="form-control student_name"></input>
-
                     <button id="submitAns" class="btn btn-danger" type="submit">Submit Answers</button>
                 {{/if}}
             {{/each}}
-        {{!-- end of questionsForm --}}
-        </div>
 
-        <div style="display: none" id="comments">
-            <h2>Students comments</h2>
+            <div style="display: none" id="comments">
+                <h2>Students comments</h2>
                 {{#each questions}}
                     {{#if current}}
                         {{#each Answers}}
@@ -65,11 +60,9 @@
                         {{/each}}
                     {{/if}}
                 {{/each}}
-            </div>
-            
+            </div>   
         </div>
     </div>
-{{!-- end of wolfram --}}
 </div>
 
 <div class="footer">
