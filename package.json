@@ -13,6 +13,7 @@
   "dependencies": {
     "axios": "^0.19.0",
     "dotenv": "^8.0.0",
+    "eslint": "^6.1.0",
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
     "jquery": "3.2.1",
@@ -23,7 +24,10 @@
     "chai": "^4.2.0",
     "chai-http": "^4.3.0",
     "cross-env": "^5.2.0",
-    "mocha": "^6.1.4",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "mocha": "^6.2.0",
     "prettier": "^1.17.1"
   }
 }

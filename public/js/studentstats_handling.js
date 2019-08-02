@@ -20,6 +20,10 @@ $(document).ready(function() {
     })
   }
 
+  function showcomments(){
+    $("#comments").removeAttr("style")
+  }
+
   var handleFormSubmit = function(event) {
     event.preventDefault();
     
@@ -47,6 +51,7 @@ $(document).ready(function() {
     $answer2.val("");
     $answer3.val("");
     $comment.val("")
+    showcomments()
   };
 
   $submitBtnAns.on("click", handleFormSubmit)

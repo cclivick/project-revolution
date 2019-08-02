@@ -1,41 +1,56 @@
-<div id="home">
+{{!-- <div class="content">
 
-  <div class="container">
-      <div class="jumbotron jumbotron-fluid">
-          <div class="container text-center">
-              <h1 class="display-4">
-                  <a href="/">
-                    <!--Homepage Image Logo-->
-                    <img id="brandLogo" src="images/logo.png">
-                  </a>
-              </h1>
-              <h2 id="tagline">Insert tagline or text about the website</h2>
-          </div>
-      </div>
-
-
-
-  <div class="row">
-    <div class="col-12 text-center">
-      <h3>Choose an option to continue</h3>
-       <a href="/student"> <button id="studentButton"  class="btn btn-primary btn-lg btn-block">Student</button></a>
-       <a href="/teacher"> <button id="teacherButton" href="/teacher" class="btn btn-primary btn-lg btn-block">Teacher</button> </a>
+<div id="home"> --}}
+  
+<div class="header">
+<div class="grid-container">
+    <div class="container text-center">
+        <h1 class="display-4">
+            <a href="/">
+            <!--Homepage Image Logo-->
+            <img id="brandLogo" src="images/logo.png">
+            </a>
+        </h1>
     </div>
-  </div>
+   </div> 
+</div>
 
+<div class="grid-container">
+    <div class="grid-x grid-margin-x">
+        <div class= "cell align center">
+           <div class="small-12 text-center container" id="option">
+              <p>Choose an option to continue</p>
+            </div>
+        </div>
+    </div>    
+      <hr>
+
+      <div class="grid-x grid-margin-x">
+      <div class= "cell small-12">
+        <a href="/student" id="studentButton"  class="button expanded">Student</a>
+       <a href="/teacher" id="teacherButton" class="button expanded">Teacher</a>
+    </div>
+    </div>
+</div>
 
 <div class="footer">
-    <div class="col-md-12">
-        <nav class="navbar navbar-default navbar-fixed-bottom">
-            <div class="container">
-                <a class="nav-link" href="https://github.com/cclivick/project-revolution">GitHub Repository</a>  
-                <p class="navbar-text navbar-right">website name &copy; 2019</p>
-            </div>
-        </nav>
+    <div class="cell small-12">
+        <a href="https://github.com/cclivick/project-revolution" id="github">GitHub Repository</a>  
+        <a id="copyright">Teach.me &copy; 2019</a>
     </div>
 </div>
 
-</div>
+
+{{!-- <div class="top-bar">
+  <div class="top-bar-left stacked-for-medium">
+      <P class="menu-text">Teach.me</p>  
+  </div>
+  
+  <div class="top-bar-right stacked-for-medium">
+    <p>Home</p>
+  </div>
+</div> --}}
+
 
 {{!-- end of "home" div--}}
-</div>
+

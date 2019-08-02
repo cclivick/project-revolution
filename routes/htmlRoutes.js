@@ -7,8 +7,11 @@ module.exports = function(app) {
   });
 
   app.get("/student", function(req, res) {
-    db.Question.findAll({}).then(function(data) {
-      //findAll({})
+    db.Question.findAll({
+      include:[{
+        model: db.Answer
+      }]
+    }).then(function(data) {
       res.render("student", {
         //"student" is the file to render to
         questions: data
