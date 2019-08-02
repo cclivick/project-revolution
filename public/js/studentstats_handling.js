@@ -67,7 +67,9 @@ $(document).ready(function() {
     };
 
     if (!(answer.student_name && answer.answer1 && answer.answer2 && answer.answer3 && answer.comment)) {
-      alert("You must fill all the fields!");
+      $(function(){
+        $("#alert").dialog();
+      });
       return;
     }
 
