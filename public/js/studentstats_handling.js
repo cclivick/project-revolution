@@ -83,7 +83,6 @@ $(document).ready(function() {
     showcomments()
   };
 
-  $submitBtnAns.on("click", handleFormSubmit)
-  $(document).on("load", formatTable1);
+  $submitBtnAns.on("click", handleFormSubmit);
 
 })
