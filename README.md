@@ -1,18 +1,31 @@
-UW-Extension Coding Boot Camp Project 2
+# Teach.me
 
-Purpose: Show some skill in Sequelize, MySQL, Node, Express, Handlebars, MVC design pattern, Heroku deployment with databases.
 
-How to use it: 
+### Purpose: 
+This is an application designed to provide professional educators and substitutes with an the ability to design quality computer-based classroom activities and discussions with just a few clicks.
 
-    Two sides:
+### Motivation:
+Busy educators know that time management and lesson planning can be among the most challenging aspects of teaching. Sometimes a 50-minute lesson only takes 30 minutes and teachers are left wondering how to best utilize their remaining classroom minutes. For this reason, we wanted to create an intuitive application that would allow teachers to quickly asign questions or discussions in almost any topic that they could imagine, without sacrificing quality instruction. 
 
-    Teacher can:
-        *Set the topic (compare two countries) and questions for it
-        *See and grade current submissions
-        *View archieve with old topics and student submissions
+### Working Features:
+* Our first working feature of this application is a World Geography activity in which teachers can select 2 countries that students can compare.
 
-    Student can:
-        *Answer the questions, leave comment about the topic
-        *Once answers submitted, see other students' comments
+### How to use this feature: 
+    TEACHER SIDE:
+
+* Teacher selects two countries for students to compare, and asks three questions for them to answer.
+
+* Once students have answered their questions and submitted them, the teacher has access to all of their input and the ability to give them a grade of A through F.
+
+
+
+### 
+    STUDENT SIDE:
+
+* Students open up their page to see two tables of data (retrieved from Wolfram Alpha databse).
+
+* Below, they see the questions posed by their teacher and can answer them along with providing a comment or question to generate further class discussion.
+
+* Students may also see comments left by fellow students after submitting their answers. 
 
 Here is link to Heroku:
