@@ -8,11 +8,35 @@
     <a href="/teacher" id="studentPageLink">Teacher</a>
   </div> --}}
 </div>
+    <div class= "container" id="wolfram" >
+        {{#each questions}}
+        {{#if current}}
+        {{!-- Display Info from website here --}}
+        <div class="row">
+            <div class="col-md" id="countryOne">
+                    <h1>Country 1 Data</h1>
+                    <br>
+                        <table data-id="{{country1data}}" id="countryOneTable">
+                            <tbody id="countryOneTableBody">
 
-<div class="grid-container" id="wolfram">
-  <div class="grid-x grid-margin-x" id="studentForm">
-      <div class= "cell align center">
+                            </tbody>
+                            </table>
+                </div>
+            <div class="col-md" id="countryTwo">
+                    <h1>Country 2 Data</h1>
+                    <br>
+                        <table data-id="{{country2data}}" id="countryTwoTable">
+                            <tbody id="countryTwoTableBody">
 
+                            </tbody>
+                            </table>
+                        <div class="currentquestion" data-id="{{id}}">
+                            <div class= "cell small-12">
+                                <h1 id="country1" data-id="{{country1}}">{{country1}}</h1>  
+                                <h1 id="country2" data-id="{{country2}}">{{country2}}</h1>
+
+                            </div>               
+                        </div>
             {{!-- Display Info from website here --}}
             <div class="questionsForm">
                 {{#each questions}}
