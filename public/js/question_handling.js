@@ -10,14 +10,18 @@ $(document).ready(function() {
   var archive = []
 
   function saveQuestion (question) {
-    return $.ajax({
+    $.ajax({
       headers: {
         "Content-Type": "application/json"
       },
       type: "POST",
       url: "api/questions",
       data: JSON.stringify(question)
-    })
+    }).then(
+      function() {
+        location.reload()
+      }
+    )
   }
 
   var handleFormSubmit = function(event) {
@@ -33,7 +37,7 @@ $(document).ready(function() {
     };
 
     if (!(question.country1 && question.country2 && question.question1 && question.question2 && question.question3)) {
-      alert("You must fill all the fields!");
+      $("#alert1" ).dialog();
       return;
     }
     else{
@@ -43,7 +47,8 @@ $(document).ready(function() {
         for(var i=0; i<res.length; i++){
           if(res[i].current){
             if(res[i].grade==null){
-              alert("Please grade all submissions for current topic")
+              $("#alert2" ).dialog();
+              return
             }
           }
         }
@@ -66,7 +71,7 @@ $(document).ready(function() {
       for(var i = 0; i<archive.length; i++){
         if(!archive[i].current){
           var a = $("<button>")
-          a.addClass("archeachbutton")
+          a.addClass("archeachbutton button secondary")
           a.attr("id", archive[i].id)
           a.text(archive[i].country1 + " and " + archive[i].country2)
           $("#archivebuttons").append(a)
@@ -81,7 +86,7 @@ $(document).ready(function() {
     for(var i = 0; i<archive.length; i++){
       if(id==archive[i].id){
         var b = $("<h2>")
-        b.text("Country #1: " + archive[i].country1 + " Country #2: " + archive[i].country2)
+        b.html("Country #1: " + archive[i].country1 + " Country #2: " + archive[i].country2)
         $("#archive").append(b)
         for (var j=0; j<archive[i].Answers.length;j++){
           var c = $("<p>")
@@ -105,11 +110,10 @@ $(document).ready(function() {
         id: id,
         grade: thisGrade
       }
-  }).then(
+    }).then(
       function() {
         location.reload()
       }
     )
   })
-
 })
