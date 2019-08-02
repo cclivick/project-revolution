@@ -1,14 +1,30 @@
 <div>
     <div class= "container" id="wolfram" >
+        {{#each questions}}
+        {{#if current}}
         {{!-- Display Info from website here --}}
         <div class="row">
-            <div class="col-md" id="countryOneTable">
+            <div class="col-md" id="countryOne">
                     <h1>Country 1 Data</h1>
+                    <br>
+                    <table id="countryOneTable">
+                        <th>
+                                <tr>{{country1data}}</tr>
+                            </th>
+                        </table>
                 </div>
-            <div class="col-md" id="countryTwoTable">
+            <div class="col-md" id="countryTwo">
                     <h1>Country 2 Data</h1>
+                    <br>
+                    <table id="countryTwoTable">
+                        <th>
+                                <tr>{{country2data}}</tr>
+                        </th>
+                    </table>
                 </div>
         </div>
+        {{/if}}
+        {{/each}}
     </div>
 
 
@@ -34,3 +50,4 @@
         {{/each}}
     </div>
 </div>
+
