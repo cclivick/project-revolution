@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "OnWisconsin1!",
+    "password": "password123",
     "database": "geo_students_db",
     "host": "localhost",
     "dialect": "mysql"
