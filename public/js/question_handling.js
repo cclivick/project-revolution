@@ -37,9 +37,7 @@ $(document).ready(function() {
     };
 
     if (!(question.country1 && question.country2 && question.question1 && question.question2 && question.question3)) {
-      $(function(){
-        $("#alert1" ).dialog();
-      });
+      $("#alert1" ).dialog();
       return;
     }
     else{
@@ -49,9 +47,7 @@ $(document).ready(function() {
         for(var i=0; i<res.length; i++){
           if(res[i].current){
             if(res[i].grade==null){
-              $(function(){
-                $("#alert2" ).dialog();
-              });
+              $("#alert2" ).dialog();
               return
             }
           }
