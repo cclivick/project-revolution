@@ -43,7 +43,8 @@ $(document).ready(function() {
         for(var i=0; i<res.length; i++){
           if(res[i].current){
             if(res[i].grade==null){
-              alert("Please grade all submissions for current topic")
+              alert("Please grade all submissions for current topic.")
+              return
             }
           }
         }
