@@ -32,30 +32,78 @@ body {
   padding-left: 20px;
 }
 
-#option {
+#logIn {
+  text-align: center;
+  color: white;
+}
+#indexButtons {
+  margin-bottom: 15%;
+}
+
+/* .tagline {
+  margin: 0%;
+  padding: 0%;
+}
+
+#tagline {
   font-family: 'Barlow', sans-serif;
   font-size: 200%;
   font-weight: bold;
-  color: white;
+  text-decoration: underline;
+  color: rgba(13, 104, 240);
+  text-shadow: 2px 2px rgb(3, 38, 90);
   padding-bottom: 10px;
   padding-top: 10px;
   align-items: center;
+} */
+
+#homepageFooter {
+  height: 50px;
+  margin-top: 5%;
+  background-color: rgba(13,104,240,.8);
+  color: white;
+  position: relative;
+  bottom: 0;
+  width: auto;
+  padding-top: 1%
+}
+
+@media (max-width: 500px) {
+  #homepageFooter {
+    position: absolute;
+    margin-top: 10%;
+    bottom: 0;
+    width: 100%;
+  }
 }
 
 .footer {
   height: 50px;
   margin-top: 5%;
   background-color: rgba(13,104,240,.8);
-  color: white; 
-  position: relative; 
-  width: 100%;
-  flex-shrink: 0;
+  color: white;
+  position: relative;
+  bottom: 0; 
+  width: auto;
   padding-top: 1%;
+}
+
+@media (max-width: 500px) {
+  .footer {
+    margin-top: 10%;
+    position: absolute;
+    bottom:0;
+    width: 100%;
+  }
+}
+@media (max-width: 1250px) {
+  #wolfram, #teacherForm {
+    margin: 30px;
+  }
 }
 
 #studentPageLink {
   font-size: 100%;
-  font-weight: bold;
   font-family: 'Barlow', sans-serif;
   color: white;
 }
@@ -76,23 +124,18 @@ body {
   padding-left: 60%;
 }
 
-#studentButton {
+#studentButton, #teacherButton {
+  margin: auto;
+  margin-top: 10px;
   background-color: rgba(13, 104, 240, 0.8);
-}
-
-#teacherButton {
-  background-color: rgba(13, 104, 240, 0.8);
+  width: 55%;
+  -webkit-appearance: push-button;
+  border-radius: 10px;
+  font-size: x-large;
 }
 
 .list-group-item {
   line-height: 2.5;
-}
-
-@media (max-width:800px) {
-  .footer {
-    position: fixed;
-    bottom:0;
-  }
 }
 
 .questionsForm {
