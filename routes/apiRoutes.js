@@ -54,7 +54,7 @@ module.exports = function(app) {
                 title.toUpperCase() +
                   "\n" +
                   apiResult.pods[i].subpods[0].plaintext +
-                  "\n------------------------------------" +
+                  "\n;" +
                   "\n";
                   db.Question.update({
                     country1data: country1formatted
@@ -87,7 +87,7 @@ module.exports = function(app) {
                   title.toUpperCase() +
                     "\n" +
                     apiResult.pods[i].subpods[0].plaintext +
-                    "\n------------------------------------" +
+                    "\n;" +
                     "\n";
                     db.Question.update({
                       country2data: country2formatted
@@ -131,12 +131,5 @@ module.exports = function(app) {
           res.json(data);
     });
   });
-
-  // // Delete an example by id
-  // app.delete("/api/examples/:id", function(req, res) {
-  //   db.Example.destroy({ where: { id: req.params.id } }).then(function(dbExample) {
-  //     res.json(dbExample);
-  //   });
-  // });
 };
 
