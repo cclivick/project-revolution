@@ -1,6 +1,5 @@
 var db = require("../models");
 var axios = require("axios");
-//var keys = require("../../keys.js")
 
 module.exports = function(app) {
   app.get("/", function(req, res) {
@@ -14,7 +13,9 @@ module.exports = function(app) {
       }]
     }).then(function(data) {
       res.render("student", {
+        //"student" is the file to render to
         questions: data
+        //defining the template on "student" file
       });
     });
   });
@@ -30,24 +31,6 @@ module.exports = function(app) {
       });
     });
   });
-
-  // app.get("/teacher", function(req, res) {
-  //   function firstCall(string) {
-  //     axios.get("http://api.wolframalpha.com/v2/query?input=" + string + "&appid=" + keys)
-  //       .then(function(response) {
-  //         res.json(response);
-  //       });
-  //     };
-  //   firstCall("Germany");
-  // });
-
-  // app.get("/teacher/:id", function(req, res) {
-  //   db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
-  //     res.render("teacher", {
-  //       example: dbExample
-  //     });
-  //   });
-  // });
 
   app.get("*", function(req, res) {
     res.render("404");

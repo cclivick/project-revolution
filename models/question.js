@@ -38,6 +38,14 @@ module.exports = function(sequelize, DataTypes) {
     current: {
       type: DataTypes.BOOLEAN,
       default: false
+    },
+    country1data: {
+      type: DataTypes.TEXT,
+      allowNull: true
+    },
+    country2data: {
+      type: DataTypes.TEXT,
+      allowNull: true
     }
   });
   Question.associate = function(models) {
