@@ -4,6 +4,7 @@ body {
   background-color: black;
   font-family: 'Barlow', sans-serif;
   font-size: 100%;
+  padding-bottom: 50px;
 }
 
 #top-bar {
@@ -57,50 +58,25 @@ body {
   align-items: center;
 } */
 
-#homepageFooter {
-  height: 50px;
-  margin-top: 5%;
-  background-color: rgba(13,104,240,.8);
-  color: white;
-  position: relative;
-  bottom: 0;
-  width: auto;
-  padding-top: 1%
-}
-
-@media (max-width: 500px) {
-  #homepageFooter {
-    position: absolute;
-    margin-top: 10%;
-    bottom: 0;
-    width: 100%;
-  }
-}
 
 .footer {
   height: 50px;
   margin-top: 5%;
   background-color: rgba(13,104,240,.8);
   color: white;
-  position: relative;
+  position: fixed;
   bottom: 0; 
-  width: auto;
+  width: 100%;
   padding-top: 1%;
 }
 
-@media (max-width: 500px) {
-  .footer {
-    margin-top: 10%;
-    position: absolute;
-    bottom:0;
-    width: 100%;
-  }
-}
+
 @media (max-width: 1250px) {
   #wolfram, #teacherForm {
     margin: 30px;
   }
 }
+
 
 #studentPageLink {
   font-size: 100%;
@@ -121,7 +97,6 @@ body {
   color: white;
   padding-bottom: 10px;
   padding-top: 10px;
-  padding-left: 60%;
 }
 
 #studentButton, #teacherButton {
