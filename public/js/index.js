@@ -55,18 +55,6 @@ var refreshExamples = function() {
       $li.append($button);
 
       return $li;
-var axios = require("axios");
-
-var keys = require("../../../keys.js");
-
-function firstCall(string) {
-  axios.get("http://api.wolframalpha.com/v2/query?input=" + string + "&appid=" + keys)
-    .then(function(response) {
-      console.log(response);
-    });
-}
-
-firstCall("Germany");
 
 // The API object contains methods for each kind of request we'll make
 // var API = {
