@@ -4,14 +4,14 @@
       <img id="top-bar-logo"src="images/logo.png">
     </a>
   </h1>
-  <div class="top-bar-right stacked-for-medium">
-    <a href="/student" id="studentPageLink">Student</a>
+  <div class="top-bar-right stacked-for-large">
+    <a href="/student" id="studentPageLink">Student Page</a>
   </div>
 </div>
 
 <div class="grid-container" id="teacherForm">
   <div class="grid-x grid-margin-x">
-      <div class= "cell align center">
+    <div class= "cell align center">
 
     <div class="row">
       <div class= "cell small-12">
@@ -54,70 +54,79 @@
     </div>
 
 
-<div class="container" id="studentAnswersTable">
-  <h2>Class answers for current topic:</h2>
-  <div>
-    <p>Answers</p>
-    <div>
-      <ul>
-        <h3>Need grades</h3>
-        {{#each answers}}
-            {{#if current}}
-              {{#unless grade}}
-                    <li>
-                      Country #1: {{country1}}
-                      Country #2: {{country2}}
-                      Student: {{student_name}}
-                      Answer1: {{answer1}}
-                      Answer2: {{answer2}}
-                      Answer3: {{answer3}}
-                      Comment: {{comment}}
-                      <div class="button-group grades" data-id="{{id}}">
-                        <button class="button grade" value="A" data-id="{{id}}">A</button>
-                        <button class="button grade" value="B" data-id="{{id}}">B</button>
-                        <button class="button grade" value="C" data-id="{{id}}">C</button>
-                        <button class="button grade" value="D" data-id="{{id}}">D</button>
-                        <button class="button grade" value="F" data-id="{{id}}">F</button>
-                      </div>
-                    </li>
-                {{/unless}}
-            {{/if}}
-        {{/each}}
-      </ul>
-      
-      <ul>
-        <h3>Graded</h3>
-        {{#each answers}}
-            {{#if current}}
-              {{#if grade}}
-              <ul>
-                  <li>
-                    Country #1: {{country1}}
-                    Country #2: {{country2}}
-                    Student: {{student_name}}
-                    Answer1: {{answer1}}
-                    Answer2: {{answer2}}
-                    Answer3: {{answer3}}
-                    Comment: {{comment}}
-                    Grade: {{grade}}
-                  </li>
-                </ul>
-              {{/if}}
-            {{/if}}
-        {{/each}}
-        
+      <div class="container" id="studentAnswersTable">
+        <h2>Class answers for current topic:</h2>
+        <div>
+          <p>Answers</p>
+          <div>
+            <ul>
+              <h3>Need grades</h3>
+              {{#each answers}}
+                  {{#if current}}
+                    {{#unless grade}}
+                          <li>
+                            Country #1: {{country1}}
+                            Country #2: {{country2}}
+                            Student: {{student_name}}
+                            Answer1: {{answer1}}
+                            Answer2: {{answer2}}
+                            Answer3: {{answer3}}
+                            Comment: {{comment}}
+                            <div class="button-group grades" data-id="{{id}}">
+                              <button class="button grade" value="A" data-id="{{id}}">A</button>
+                              <button class="button grade" value="B" data-id="{{id}}">B</button>
+                              <button class="button grade" value="C" data-id="{{id}}">C</button>
+                              <button class="button grade" value="D" data-id="{{id}}">D</button>
+                              <button class="button grade" value="F" data-id="{{id}}">F</button>
+                            </div>
+                          </li>
+                      {{/unless}}
+                  {{/if}}
+              {{/each}}
+            </ul>
+            
+            <ul>
+              <h3>Graded</h3>
+              {{#each answers}}
+                  {{#if current}}
+                    {{#if grade}}
+                    <ul>
+                        <li>
+                          Country #1: {{country1}}
+                          Country #2: {{country2}}
+                          Student: {{student_name}}
+                          Answer1: {{answer1}}
+                          Answer2: {{answer2}}
+                          Answer3: {{answer3}}
+                          Comment: {{comment}}
+                          Grade: {{grade}}
+                        </li>
+                      </ul>
+                    {{/if}}
+                  {{/if}}
+              {{/each}}
+              
+          </div>
+        </div>
+  <button id="viewarchive">View archive</button>
+    <div id="archivebuttons"></div>
+      <div id="archive"></div>
+      {{!-- end of studentAnswersTable --}}
+      </div>
     </div>
   </div>
+{{!-- end of teacherForm --}}
 </div>
-<button id="viewarchive">View archive</button>
-  <div id="archivebuttons"></div>
-  <div id="archive"></div>
 
 <div class="footer">
-    <div class="cell small-12">
-        <a href="https://github.com/cclivick/project-revolution" id="github">GitHub Repository</a>  
+  <div class="grid-x">
+    <div class="cell small-6">
+        <a href="https://github.com/cclivick/project-revolution" id="github">GitHub Repository</a>
+    </div>
+    <div class="cell small-6">
         <a id="copyright">Teach.me &copy; 2019</a>
     </div>
+  </div>
 </div>
 
 
