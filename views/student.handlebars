@@ -4,70 +4,69 @@
       <img id="top-bar-logo"src="images/logo.png">
     </a>
   </h1>
-  {{!-- <div class="top-bar-right stacked-for-medium">
-    <a href="/teacher" id="studentPageLink">Teacher</a>
-  </div> --}}
+</div>
+
+<div style="display: none" id="alert" title="Attention!">
+  <p>You must fill all the fields!</p>
 </div>
 
 <div class="grid-container" id="wolfram">
   <div class="grid-x grid-margin-x" id="studentForm">
       <div class= "cell align center">
+        {{!-- Display Info from website here --}}
+        <div class="questionsForm">
+            {{#each questions}}
+                {{#if current}}
+                    <div class="grid-x currentquestion" data-id="{{id}}">
+                        <div class="cell small-6" id="countryOne">
+                            <h1 id="country1" data-id="{{country1}}">{{country1}}</h1>
+                                <br>
+                            <table id="countryOneTable">
+                                <th>
+                                    <tr>{{country1data}}</tr>
+                                </th>
+                            </table>
+                        </div>
+                        <div class="cell small-6" id="countryTwo">
+                            <h1 id="country2" data-id="{{country2}}">{{country2}}</h1>
+                                <br>
+                            <table id="countryTwoTable">
+                                <th>
+                                    <tr>{{country2data}}</tr>
+                                </th>
+                            </table>
+                        </div>
+                    </div>
+                    {{question1}}
+                        <textarea type="text" id="answer1" class="form-control studentAnswers" required></textarea>
+                    {{question2}}
+                        <textarea type="text" id="answer2" class="form-control studentAnswers" required></textarea>
+                    {{question3}}
+                        <textarea type="text" id="answer3" class="form-control studentAnswers" required></textarea>
+                    <h3>Comment</h3>    
+                        <textarea type="text" id="comment" name="comment"></textarea>
+                    <h3>Your Name</h3>
+                        <input type="text" id="student_name" name="form-control student_name"></input>
 
-            {{!-- Display Info from website here --}}
-            <div class="questionsForm">
+                    <button id="submitAns" class="btn btn-danger" type="submit">Submit Answers</button>
+                {{/if}}
+            {{/each}}
+        {{!-- end of questionsForm --}}
+        </div>
+
+        <div style="display: none" id="comments">
+            <h2>Students comments</h2>
                 {{#each questions}}
                     {{#if current}}
-                        <div class="grid-x currentquestion" data-id="{{id}}">
-                            <div class="cell small-6" id="countryOne">
-                                <h1 id="country1" data-id="{{country1}}">{{country1}}</h1>
-                                    <br>
-                                <table id="countryOneTable">
-                                    <th>
-                                        <tr>{{country1data}}</tr>
-                                    </th>
-                                </table>
+                        {{#each Answers}}
+                            <div>
+                                {{student_name}} said {{comment}}
                             </div>
-                            <div class="cell small-6" id="countryTwo">
-                                <h1 id="country2" data-id="{{country2}}">{{country2}}</h1>
-                                    <br>
-                                <table id="countryTwoTable">
-                                    <th>
-                                        <tr>{{country2data}}</tr>
-                                    </th>
-                                </table>
-                            </div>
-                    </div>
-                            {{question1}}
-                                <textarea type="text" id="answer1" class="form-control studentAnswers" required></textarea>
-                            {{question2}}
-                                <textarea type="text" id="answer2" class="form-control studentAnswers" required></textarea>
-                            {{question3}}
-                                <textarea type="text" id="answer3" class="form-control studentAnswers" required></textarea>
-                            <h3>Comment</h3>    
-                                <textarea type="text" id="comment" name="comment"></textarea>
-                            <h3>Your Name</h3>
-                                <input type="text" id="student_name" name="form-control student_name"></input>
-
-                            <button id="submitAns" class="btn btn-danger" type="submit">Submit Answers</button>
-                        
+                        {{/each}}
                     {{/if}}
                 {{/each}}
-            {{!-- end of questionsForm --}}
             </div>
-
-            <div style="display: none" id="comments">
-                <h2>Students comments</h2>
-                    {{#each questions}}
-                        {{#if current}}
-                            {{#each Answers}}
-                                <div>
-                                    {{student_name}} said {{comment}}
-                                </div>
-                            {{/each}}
-                        {{/if}}
-                    {{/each}}
-                </div>
-                
+            
         </div>
     </div>
 {{!-- end of wolfram --}}
