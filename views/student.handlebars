@@ -15,9 +15,10 @@
         <div class= "cell align center">
             {{#each questions}}
                 {{#if current}}
-                    <div class="grid-x currentquestion" data-id="{{id}}">
+                    <div class="currentquestion" data-id="{{id}}">
+                        <div class="grid-x">
                         <div class="cell small-6" id="countryOne">
-                            <h1>Country 1 Data</h1>
+                            <h1 id="country1data">Country 1 Information:</h1>
                             <h1 id="country1" data-id="{{country1}}">{{country1}}</h1>
                             <br>
                             <table data-id="{{country1data}}" id="countryOneTable">
@@ -26,13 +27,14 @@
                             </table>
                         </div>
                         <div class="cell small-6" id="countryTwo">
-                            <h1>Country 2 Data</h1>
+                            <h1 id="country2data">Country 2 Information: </h1>
                             <h1 id="country2" data-id="{{country2}}">{{country2}}</h1>
                             <br>
                             <table data-id="{{country2data}}" id="countryTwoTable">
                                 <tbody id="countryTwoTableBody">
                                 </tbody>
                             </table>
+                        </div>
                         </div>
                     </div>
                     {{question1}}
@@ -42,7 +44,7 @@
                     {{question3}}
                         <input type="text" id="answer3" class="form-control studentAnswers" required></input>
                     <h3>Comment</h3>    
-                        <input type="text" id="comment" name="comment"></input>
+                        <textarea type="text" id="comment" name="comment"></textarea>
                     <h3>Your Name</h3>
                         <input type="text" id="student_name" name="form-control student_name"></input>
                     <button id="submitAns" class="btn btn-danger" type="submit">Submit Answers</button>
