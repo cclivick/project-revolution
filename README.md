@@ -28,4 +28,11 @@ Busy educators know that time management and lesson planning can be among the mo
 
 * Students may also see comments left by fellow students after submitting their answers. 
 
-Here is link to Heroku:
+
+
+## Current Application Advantages
+### Ease of use:
+> An intuitive and organized UI is easily-accessible to both students and educators.
+### Extensive database:
+> While we are currently designing additional features and types of lesson activities, Wolfram Alpha's extensive API offers near endless possibilities for future development.
+### Deployed Application: 

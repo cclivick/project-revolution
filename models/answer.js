@@ -58,8 +58,8 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: true,
       validate: {
         len: [1]
-      }
     }
+  }
   });
   Answer.associate = function (models) {
     models.Answer.belongsTo(models.Question, {
