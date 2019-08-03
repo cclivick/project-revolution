@@ -52,7 +52,14 @@ module.exports = function(sequelize, DataTypes) {
     current: {
       type: DataTypes.BOOLEAN,
       default: false
+    },
+    grade: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      validate: {
+        len: [1]
     }
+  }
   });
   Answer.associate = function (models) {
     models.Answer.belongsTo(models.Question, {
