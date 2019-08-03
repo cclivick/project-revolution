@@ -23,7 +23,7 @@
 
       <div class="row">
         <div class= "cell small-12">
-          <h2 id="setTopic">Set topic and ask questions:</h2>
+          <h2 id="setTopic">Set Topic and Ask Questions:</h2>
         </div>
       </div>
 
@@ -61,20 +61,31 @@
       </div>
 
       <div class="container" id="studentAnswersTable">
-        <h2>Class answers for current topic:</h2>
+        <h2 id="answersTableTitle">Class Answers For The Current Topic:</h2>
         <div>
           <div>
             <ul>
-              <h3>Need grades</h3>
+              <h3>Need Grades:</h3>
               {{#each answers}}
                 {{#if current}}
                   {{#unless grade}}
-                    <li>
-                      Student: {{student_name}}
-                      Answer1: {{answer1}}
-                      Answer2: {{answer2}}
-                      Answer3: {{answer3}}
-                      Comment: {{comment}}
+                    <div>
+                      <div>
+                        Student: {{student_name}}
+                      </div>
+                      <div>
+                        Answer 1: {{answer1}}
+                      </div>
+                      <div>
+                        Answer 2: {{answer2}}
+                      </div>
+                      <div>
+                        Answer 3: {{answer3}}
+                      </div>
+                      <div>
+                        Comment: {{comment}}
+                      </div>
+                      <br>
                       <div class="button-group grades" data-id="{{id}}">
                         <button class="button grade" value="A" data-id="{{id}}">A</button>
                         <button class="button grade" value="B" data-id="{{id}}">B</button>
@@ -82,26 +93,38 @@
                         <button class="button grade" value="D" data-id="{{id}}">D</button>
                         <button class="button grade" value="F" data-id="{{id}}">F</button>
                       </div>
-                    </li>
+                      <hr>
+                    </div>
                   {{/unless}}
                 {{/if}}
               {{/each}}
             </ul>
             
             <ul>
-              <h3>Graded</h3>
+              <h3>Graded:</h3>
               {{#each answers}}
                 {{#if current}}
                   {{#if grade}}
                   <ul>
-                      <li>
+                      <div>
                         Student: {{student_name}}
-                        Answer1: {{answer1}}
-                        Answer2: {{answer2}}
-                        Answer3: {{answer3}}
+                      </div>
+                      <div>
+                        Answer 1: {{answer1}}
+                      </div>
+                      <div>
+                        Answer 2: {{answer2}}
+                      </div>
+                      <div>
+                        Answer 3: {{answer3}}
+                      </div>
+                      <div>
                         Comment: {{comment}}
+                      </div>
+                      <div>
                         Grade: {{grade}}
-                      </li>
+                      </div>
+                      <hr>
                     </ul>
                   {{/if}}
                 {{/if}}
