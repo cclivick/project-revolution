@@ -41,23 +41,13 @@ body {
   margin-bottom: 15%;
 }
 
-/* .tagline {
-  margin: 0%;
-  padding: 0%;
-}
-
-#tagline {
-  font-family: 'Barlow', sans-serif;
-  font-size: 200%;
-  font-weight: bold;
-  text-decoration: underline;
-  color: rgba(13, 104, 240);
-  text-shadow: 2px 2px rgb(3, 38, 90);
+#taglineLogo {
+  height: 50%;
+  width: 50%;
   padding-bottom: 10px;
   padding-top: 10px;
   align-items: center;
-} */
-
+}
 
 .footer {
   height: 50px;
@@ -70,13 +60,11 @@ body {
   padding-top: 1%;
 }
 
-
 @media (max-width: 1250px) {
   #wolfram, #teacherForm {
     margin: 30px;
   }
 }
-
 
 #studentPageLink {
   font-size: 100%;
@@ -118,17 +106,19 @@ body {
   border-radius: 10px;
 }
 .currentquestion {
-  text-align: center;
-}
-
-#countriesVS {
-  font-weight: bold;
+  display: block;
+  margin-left: 3%;
+  margin-right: auto;
+  width: 100%;
+  text-align: left;
+  position: relative;
 }
 
 #setTopic, #classAnswers {
 font-weight: bold;
 margin-bottom: 25px;
 margin-top: 0px;
+color: rgb(3, 38, 90);
 }
 
 #teacherForm {
@@ -140,8 +130,19 @@ margin-top: 0px;
 }
 
 #studentAnswersTable {
+  padding: 15px;
+  margin-top: 25px;
   margin-bottom: 25px;
-  border-radius: 10px;
+  background-color: rgba(75, 143, 245);
+  border-style: solid;
+  border-color: rgb(5, 22, 48);
+  font-family: 'Barlow', sans-serif;
+  color: white;
+}
+
+#answersTableTitle {
+  font-weight: bold;
+  color: rgb(3, 38, 90);  
 }
 
 .studentAnswers {
@@ -155,7 +156,31 @@ margin-top: 0px;
   width: 100%;
 }
 
-#country1, #country2, #question1, #question2, #question3 {
+#countryOne, #countryTwo {
+  padding: 15px;
+  margin: 10px;
+  width: 45%;
+  /* margin-top: 25px;
+  margin-bottom: 25px; */
+  background-color: rgba(75, 143, 245);
+  border-style: solid;
+  border-color: rgb(5, 22, 48);
+  font-family: 'Barlow', sans-serif;
+  color: white;
+}
+
+#country1data, #country2data {
+font-size: 200%
+}
+
+#country1, #country2 {
+  font-size: 200%;
+  border-radius: 6px;
+  padding: 5px;
+  margin: 2px;
+}
+
+#question1, #question2, #question3 {
   border-radius: 6px;
   padding: 5px;
   margin: 2px;
